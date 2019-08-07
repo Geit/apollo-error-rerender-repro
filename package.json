@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "dependencies": {
     "@apollo/react-testing": "^3.0.0",
