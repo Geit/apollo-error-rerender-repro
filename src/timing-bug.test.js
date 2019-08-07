@@ -27,7 +27,10 @@ describe('Apollo error prop disappears on rerender', () => {
         <TimingBug userId="10" />
       </MockedProvider>
     );
-    await nextTick(50);
+    await act(async () => {
+      await nextTick(50);
+    });
+    
 
     wrapper.update();
     console.log(wrapper.debug());
@@ -42,7 +45,9 @@ describe('Apollo error prop disappears on rerender', () => {
         <TimingBug userId="10" />
       </MockedProvider>
     );
-    await nextTick(0);
+    await act(async () => {
+      await nextTick(50);
+    });
 
     wrapper.update();
     console.log(wrapper.debug());
